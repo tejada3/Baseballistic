@@ -1,0 +1,132 @@
+
+
+h3.leader {
+    color: white;
+    font-family: 'Faster One', cursive;
+    font-size: xxx-large;
+    margin-bottom: 0;
+
+}
+nav {
+    background-color: red;
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+header {
+    background-color: #000000ba;
+}
+
+body {
+    background: url("/images/view.jpg") fixed;
+    background-size: cover;
+
+
+}
+
+#insideNav{
+    background-color: white;
+    border-color: dodgerblue;
+    border-style: solid;
+}
+
+#titlepage{
+    padding-left: 1em;
+    color: firebrick;
+    margin-bottom: .2rem;
+    margin-top: .2rem;
+    border-top: solid thick red;
+    border-bottom: solid thick red;
+    background-image:  url("/images/balls.jpg");
+    background-size: cover;
+    font-variant: small-caps;
+    font-size: xxx-large;
+    font-family: 'Zen Dots', cursive;
+}
+
+
+#Logo {
+    padding-right: .7rem;
+    font-variant: petite-caps;
+    font-size: medium;
+
+
+}
+
+
+table{
+    background-color: lavenderblush;
+    border-collapse: collapse;
+    width: min-content;
+    height: 85%;
+}
+thead{
+    background-color: white;
+    font-size: large;
+
+}
+
+h5.container{
+    text-align: center;
+    width:auto;
+    border-style: inset;
+    background-color: white;
+    font-family: 'Rye', cursive;
+    color: red;
+    font-weight: 900;
+
+
+}
+.row-3{
+    padding-left: 5rem;
+    font-size: large;
+
+}
+.container{
+    background-color: #d8d6ce;
+    width: unset;
+    height: fit-content;
+    padding-top: .2rem;
+    padding-bottom: 0;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    border: solid black;
+
+}
+
+#infobody{
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+table.table {
+    background-color: #519002d4;
+    margin-bottom: .7rem;
+}
+
+th[scope="row"] {
+	background-color: #c7622e;
+}
+
+th[scope="col"]{
+    color: darkgray;
+    font-weight: 900;
+}
+tr, th{
+
+	border: 2px inset black;
+    font-family: 'Bungee Shade', cursive;
+
+    color: darkblue;
+}
+
+
+ td{
+     font-weight: 900;
+ }
+ select.form-select.form-select-lg.mb-3{
+     background-color: dodgerblue;
+     border: black;
+ }

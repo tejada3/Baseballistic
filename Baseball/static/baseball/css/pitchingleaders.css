@@ -1,0 +1,21 @@
+#pitcherleaders{
+    border: inset whitesmoke 6px;
+    width: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #000000ba;
+}
+
+#pitchingtitle{
+
+    margin-top: 2rem;
+    border: solid red;
+}
+
+
+
+div.row.align-items-start {
+	justify-content: center;
+    --bs-gutter-x: 1rem;
+
+}

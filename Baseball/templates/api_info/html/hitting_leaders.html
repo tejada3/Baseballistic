@@ -1,0 +1,184 @@
+
+{% load static %}
+{% block hittingL %}
+
+
+<head>
+
+<link rel="stylesheet" href="{% static 'baseball/css/hittingleaders.css' %}">
+    <title>Baseballistic</title>
+</head>
+
+
+
+<header id="hittingtitle">
+    <div class="row-3">
+        <h3 class="leader">LEAGUE LEADERS IN HITTING</h3>
+    </div>
+</header>
+
+<section id="leagueleaders" >
+
+<!--    =========================================   homeruns  =================================-->
+        <div class="row align-items-start">
+                <div class="col">
+                    <div class="container">
+                        <h5 id="HR" class="container">HOMERUNS</h5>
+                        <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">League</th>
+                                  <th scope="col">{% if n.hr.totalSize == '1' %} {{ n.hr.row.league }} {% else %}  {{ n.hr.row.0.league}}  {% endif %}</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+
+                                <tr>
+                                  <th scope="row">Name</th>
+                                  <td>{% if n.hr.totalSize == '1' %} {{ n.hr.row.name_display_first_last }} {% else %}  {{ n.hr.row.0.name_display_first_last}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">HR</th>
+                                  <td>{% if n.hr.totalSize == '1' %} {{ n.hr.row.hr }} {% else %}  {{ n.hr.row.0.hr}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">RBI</th>
+                                  <td >{% if n.hr.totalSize == '1' %} {{ n.hr.row.rbi }} {% else %}  {{ n.hr.row.0.rbi}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">OPS</th>
+                                  <td>{% if n.hr.totalSize == '1' %} {{ n.hr.row.ops }} {% else %}  {{ n.hr.row.0.ops}}  {% endif %}</td>
+                                </tr>
+
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--================================================ hits =====================================-->
+                 <div class="col">
+                    <div class="container">
+                        <h5 id="h" class="container">HITS</h5>
+                        <table class="table">
+                              <thead>
+
+                                <tr>
+                                  <th scope="col">League</th>
+                                  <th scope="col">{% if n.h.totalSize == '1' %} {{ n.h.row.league }} {% else %}  {{ n.h.row.0.league}}  {% endif %}</th>
+                                </tr>
+
+                              </thead>
+
+                              <tbody>
+
+                                <tr>
+                                  <th scope="row">Name</th>
+                                  <td>{% if n.h.totalSize == '1' %} {{ n.h.row.name_display_first_last }} {% else %}  {{ n.h.row.0.name_display_first_last}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">AB</th>
+                                  <td>{% if n.h.totalSize == '1' %} {{ n.h.row.ab }} {% else %}  {{ n.h.row.0.ab}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">Hits</th>
+                                  <td >{% if n.h.totalSize == '1' %} {{ n.h.row.h }} {% else %}  {{ n.h.row.0.h}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">XBH</th>
+                                  <td>{% if n.h.totalSize == '1' %} {{ n.h.row.xbh }} {% else %}  {{ n.h.row.0.xbh}}  {% endif %}</td>
+                                </tr>
+
+                              </tbody>
+                        </table>
+                    </div>
+               </div>
+
+                <!--=============================================== BATTING AVERAGE =====================================-->
+                <div class="col">
+                    <div id="avg" class="container">
+                        <h5 class="container">AVERAGE</h5>
+                        <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">League</th>
+                                  <th scope="col">{% if n.avg.totalSize == '1' %} {{ n.avg.row.league }} {% else %}  {{ n.avg.row.0.league}}  {% endif %}</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Name</th>
+                                  <td>{% if n.avg.totalSize == '1' %} {{ n.avg.row.name_display_first_last }} {% else %}  {{ n.avg.row.0.name_display_first_last}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">Hits</th>
+                                  <td>{% if n.avg.totalSize == '1' %} {{ n.avg.row.h }} {% else %}  {{ n.avg.row.0.h}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">AVG</th>
+                                  <td >{% if n.avg.totalSize == '1' %} {{ n.avg.row.avg }} {% else %}  {{ n.avg.row.0.avg}}  {% endif %}</td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">OBP</th>
+                                  <td>{% if n.avg.totalSize == '1' %} {{ n.avg.row.obp }} {% else %}  {{ n.avg.row.0.obp}}  {% endif %}</td>
+                                </tr>
+
+                              </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--    ==========================================  STOLEN BASES ========================================-->
+                <div class="col">
+                    <div class="container">
+                        <h5 id="sb" class="container">STOLENBASEBASES</h5>
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">League</th>
+                              <th scope="col">{% if n.sb.totalSize == '1' %} {{ n.sb.row.league }} {% else %}  {{ n.sb.row.0.league}}  {% endif %}</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+
+                            <tr>
+                              <th scope="row">Name</th>
+                              <td>{% if n.sb.totalSize == '1' %} {{ n.sb.row.name_display_first_last }} {% else %}  {{ n.sb.row.0.name_display_first_last}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">H</th>
+                              <td>{% if n.sb.totalSize == '1' %} {{ n.sb.row.h }} {% else %}  {{ n.sb.row.0.h}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">SB</th>
+                              <td >{% if n.sb.totalSize == '1' %} {{ n.sb.row.sb }} {% else %}  {{ n.sb.row.0.sb}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">SB%</th>
+                              <td>{{n.sbp}}</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                        </div>
+                    </div>
+        </div>
+</section>
+
+
+{% endblock  %}

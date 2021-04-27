@@ -1,0 +1,177 @@
+
+{% load static %}
+{% block pitchingL %}
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'baseball/css/pitchingleaders.css' %}">
+</head>
+
+<header id="pitchingtitle">
+    <div class="row-3">
+        <h3 class="leader">LEAGUE LEADERS IN PITCHING</h3>
+    </div>
+</header>
+
+<section id="pitcherleaders">
+<!--    =========================================   Earned run average  =================================-->
+   <div class="row align-items-start">
+        <div class="col">
+
+            <div class="container">
+                <h5 id="era" class="container">ERA</h5>
+                <table class="table">
+
+                      <thead>
+                        <tr>
+                          <th scope="col">League</th>
+                          <th scope="col">{% if y.era.totalSize == '1' %} {{ y.era.row.league}} {% else %}  {{ y.era.row.0.league}}  {% endif %}</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <th scope="row">Name</th>
+                          <td>{% if y.era.totalSize == '1' %} {{ y.era.row.name_display_first_last}} {% else %}  {{ y.era.row.0.name_display_first_last}}  {% endif %}</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">ERA</th>
+                          <td>{% if y.era.totalSize == '1' %} {{ y.era.row.era}} {% else %}  {{ y.era.row.0.era}}  {% endif %}</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">ER</th>
+                          <td >{% if y.era.totalSize == '1' %} {{ y.era.row.er}} {% else %}  {{ y.era.row.0.er}}  {% endif %}</td>
+                        </tr>
+
+                        <tr>
+                          <th scope="row">IP</th>
+                          <td>{% if y.era.totalSize == '1' %} {{ y.era.row.ip}} {% else %}  {{ y.era.row.0.ip}}  {% endif %}</td>
+                        </tr>
+
+                      </tbody>
+                </table>
+            </div>
+        </div>
+
+
+<!--================================================ Wins =====================================-->
+      <div class="col">
+            <div class="container">
+                <h5 id="w" class="container">WINS</h5>
+                <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">League</th>
+                          <th scope="col">{% if y.w.totalSize == '1' %} {{ y.w.row.league}} {% else %}  {{ y.w.row.0.league}}  {% endif %}</th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                            <tr>
+                              <th scope="row">Name</th>
+                              <td>{% if y.w.totalSize == '1' %} {{ y.w.row.name_display_first_last}} {% else %}  {{ y.w.row.0.name_display_first_last}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Starts</th>
+                              <td>{% if y.w.totalSize == '1' %} {{ y.w.row.gs}} {% else %}  {{ y.w.row.0.gs}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Wins</th>
+                              <td >{% if y.w.totalSize == '1' %} {{ y.w.row.w}} {% else %}  {{ y.w.row.0.w}}  {% endif %}</td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">Loses</th>
+                              <td>{% if y.w.totalSize == '1' %} {{ y.w.row.l}} {% else %}  {{ y.w.row.0.l}}  {% endif %}</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+      </div>
+
+<!--=============================================== Strike outs =====================================-->
+      <div class="col">
+        <div class="container">
+            <h5 id="so" class="container">Strike Outs</h5>
+            <table class="table">
+
+                <thead>
+                    <tr>
+                      <th scope="col">League</th>
+                      <th scope="col">{% if y.so.totalSize == '1' %} {{ y.so.row.league}} {% else %}  {{ y.so.row.0.league}}  {% endif %}</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                      <th scope="row">Name</th>
+                      <td>{% if y.so.totalSize == '1' %} {{ y.so.row.name_display_first_last}} {% else %}  {{ y.so.row.0.name_display_first_last}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">SO</th>
+                      <td>{% if y.so.totalSize == '1' %} {{ y.so.row.so}} {% else %}  {{ y.so.row.0.so}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                        {%comment%} OBA = opponent batting average {% endcomment %}
+                      <th scope="row">HR/9</th>
+                      <td >{% if y.so.totalSize == '1' %} {{ y.so.row.hr9}} {% else %}  {{ y.so.row.0.hr9}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                      {%comment%} NP = Number of pitches {% endcomment %}
+                      <th scope="row">NP</th>
+                      <td>{% if y.so.totalSize == '1' %} {{ y.so.row.np}} {% else %}  {{ y.so.row.0.np}}  {% endif %}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+<!--    ==========================================  SAVES ========================================-->
+      <div class="col">
+        <div class="container">
+            <h5 id="sb" class="container">Saves</h5>
+            <table class="table">
+
+                  <thead>
+                    <tr>
+                      <th scope="col">League</th>
+                      <th class="xfull" scope="col">{% if y.sv.totalSize == '1' %} {{ y.sv.row.league}} {% else %}  {{ y.sv.row.0.league}}  {% endif %}</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <th scope="row">Name</th>
+                      <td>{% if y.sv.totalSize == '1' %} {{ y.sv.row.name_display_first_last}} {% else %}  {{ y.sv.row.0.name_display_first_last}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">APP</th>
+                      <td>{% if y.sv.totalSize == '1' %} {{ y.sv.row.so}} {% else %}  {{ y.sv.row.0.so}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">SAVES</th>
+                      <td >{% if y.sv.totalSize == '1' %} {{ y.sv.row.sv}} {% else %}  {{ y.sv.row.0.sv}}  {% endif %}</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">SVO</th>
+                      <td>{% if y.sv.totalSize == '1' %} {{ y.sv.row.svo}} {% else %}  {{ y.sv.row.0.svo}}  {% endif %}</td>
+                    </tr>
+                  </tbody>
+            </table>
+      </div>
+   </div>
+</div>
+
+ </section>
+{% endblock  %}

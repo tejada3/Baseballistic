@@ -1,0 +1,98 @@
+{% block TeamS %}
+{% load static %}
+ <head>
+  <meta charset="utf-8">
+  <title>Baseballistic</title>
+     <link rel="stylesheet" href="{% static 'baseball/css/Team_section.css' %}">
+ </head>
+
+
+
+<section id="teamSection" >
+    <caption>
+        <h4> {{name}} Team Stats</h4>
+    </caption>
+
+
+
+<div class="row align-items-start">
+    <div class="col-2">
+      <header class="section">
+          <div id="hit">
+              Team Hitting Statistics
+              </div>
+      </header>
+      <div id="Teamh" class=container>
+          <table id="hitting" class="table">
+              <tr>
+                  <th scope="row">Hits</th>
+                  <td>{{ ts.h }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Home Runs</th>
+                  <td>{{ ts.hr }}</td>
+
+              </tr>
+              <tr>
+                  <th scope="row">Batting Average</th>
+                  <td>{{ ts.avg }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Walks</th>
+                  <td>{{ ts.bb }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">On Base Percentage</th>
+                  <td>{{ ts.obp }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Stolen Bases</th>
+                  <td>{{ ts.sb }}</td>
+              </tr>
+          </table>
+      </div>
+</div>
+
+
+
+
+     <div class="col-2">
+<header class="section">
+  <div id="pitch">
+        Team Pitching Statistics
+      </div>
+    </header>
+
+      <div id="Teamp" class="container">
+          <table id="pitching" class="table">
+              <tr>
+                  <th scope="row">Earned Run Average</th>
+                  <td>{{ ts.era }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Innings Pitched</th>
+                  <td>{{ ts.ip }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Wins/Losses</th>
+                  <td>{{ ts.w }}-{{ ts.l }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Saves</th>
+                  <td>{{ ts.sv }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Strikeouts</th>
+                  <td>{{ ts.so }}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Walks & Hits Per Inning</th>
+                  <td>{{ ts.sb }}</td>
+              </tr>
+          </table>
+      </div>
+
+     </div>
+    </div>
+</section>
+{% endblock TeamS %}

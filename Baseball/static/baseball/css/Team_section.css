@@ -1,0 +1,78 @@
+
+
+header.section {
+    font-size: large;
+	border: solid black;
+	background-color: #000000ba;
+
+}
+
+section#teamSection {
+	border: inset whitesmoke 6px;
+	background-size: contain;
+	margin-top: 2rem;
+	background-color: #000000ba;
+}
+table#hitting.table{
+	width: 100%;
+	padding-top: 1rem;
+
+
+
+}
+table#pitching.table{
+	width: 100%;
+	padding-top: 1rem;
+}
+
+
+div#Teamh.container {
+	padding-top: .5rem;
+	padding-bottom: .1rem;
+	width: auto;
+	border: solid black;
+
+}
+
+div#Teamp.container {
+	padding-top: .5rem;
+	padding-bottom: .1rem;
+	width: auto;
+	border: solid black;
+}
+
+div.col-2 {
+	background-color: white;
+	width: fit-content;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	margin-bottom: 1rem;
+	padding: .1rem;
+	text-align: -webkit-center;
+
+
+}
+
+h4 {
+	color: white;
+	background: #000000ba;
+	text-align: center;
+	border: solid dodgerblue;
+}
+
+div#hit {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	color: white;
+	font-size: x-large;
+	background-color: #000000ba;
+
+
+}
+
+div#pitch {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	color: white;
+	font-size: x-large;
+	background-color: #000000ba;
+
+}
