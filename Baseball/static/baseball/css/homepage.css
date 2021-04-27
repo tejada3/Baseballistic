@@ -20,7 +20,7 @@ header {
 }
 
 body {
-    background: url("/images/view.jpg") fixed;
+    background: url("/static/baseball/images/view.jpg") fixed;
     background-size: cover;
 
 
@@ -39,7 +39,7 @@ body {
     margin-top: .2rem;
     border-top: solid thick red;
     border-bottom: solid thick red;
-    background-image:  url("/images/balls.jpg");
+    background-image:  url("/static/baseball/images/balls.jpg");
     background-size: cover;
     font-variant: small-caps;
     font-size: xxx-large;

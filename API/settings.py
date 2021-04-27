@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cz_@(sidr@@+&@kzozafa0g7b&$0*db2ytroc6@ed8cd@9h*e&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['baseballistc-api.herokuapp.com']
+ALLOWED_HOSTS = ['baseballistc-api.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -114,16 +114,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-MEDIA_URL = '/images/'
-MEDIA_ROOT = 'Baseball/static/baseball/images/'
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '../Baseball/static'),
+MEDIA_URL = '/Baseball/'
+
+
+STATIC_URL = '/static/'
+
+
+STATIC_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Baseball')
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'Baseball')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
