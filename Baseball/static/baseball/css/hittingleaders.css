@@ -1,9 +1,10 @@
 #leagueleaders{
     border: inset whitesmoke 6px;
-    width: 100%;
+    width: auto;
     padding-bottom: .5rem;
     padding-top: .5rem;
     background-color: #000000ba;
+        text-align: center;
 }
 
 h5 {
@@ -23,3 +24,4 @@ div.row.align-items-start {
 	justify-content: center;
 
 }
+

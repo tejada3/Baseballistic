@@ -55,16 +55,16 @@ div.col-2 {
 
 h4 {
 	color: white;
-	background: #000000ba;
+	background-color: #00000000;
 	text-align: center;
-	border: solid dodgerblue;
+	border: solid red;
 }
 
 div#hit {
 	font-family: 'Montserrat Subrayada', sans-serif;
 	color: white;
 	font-size: x-large;
-	background-color: #000000ba;
+	background-color: black;
 
 
 }
@@ -73,6 +73,6 @@ div#pitch {
 	font-family: 'Montserrat Subrayada', sans-serif;
 	color: white;
 	font-size: x-large;
-	background-color: #000000ba;
+	background-color: black;
 
 }

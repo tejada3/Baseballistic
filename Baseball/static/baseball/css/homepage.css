@@ -8,7 +8,7 @@ h3.leader {
 
 }
 nav {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.64);
     width: 100%;
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -22,6 +22,7 @@ header {
 body {
     background: url("/static/baseball/images/view.jpg") fixed;
     background-size: cover;
+
 
 
 }
@@ -60,22 +61,25 @@ table{
     background-color: lavenderblush;
     border-collapse: collapse;
     width: min-content;
-    height: 85%;
+
 }
 thead{
     background-color: white;
-    font-size: large;
+    font-size: medium;
+    line-break: anywhere;
+
 
 }
 
 h5.container{
     text-align: center;
-    width:auto;
+    width: auto;
     border-style: inset;
     background-color: white;
     font-family: 'Rye', cursive;
     color: red;
-    font-weight: 900;
+    font-weight: 500;
+    font-size: large;
 
 
 }
@@ -86,9 +90,9 @@ h5.container{
 }
 .container{
     background-color: #d8d6ce;
-    width: unset;
+    width: fit-content;
     height: fit-content;
-    padding-top: .2rem;
+    padding-top: .7rem;
     padding-bottom: 0;
     padding-left: .7rem;
     padding-right: .7rem;
@@ -111,22 +115,24 @@ th[scope="row"] {
 }
 
 th[scope="col"]{
-    color: darkgray;
-    font-weight: 900;
+ color: black;
+    font-weight: 800;
 }
 tr, th{
 
 	border: 2px inset black;
     font-family: 'Bungee Shade', cursive;
 
-    color: darkblue;
+    color: black;
 }
 
 
  td{
-     font-weight: 900;
+     font-weight: 500;
+     font-family: 'Fugaz One', cursive;
+     color: darkred;
  }
  select.form-select.form-select-lg.mb-3{
-     background-color: dodgerblue;
-     border: black;
+     background-color: rgba(255, 0, 0, 0.45);
+     border: solid black;
  }

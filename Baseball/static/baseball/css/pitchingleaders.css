@@ -4,6 +4,7 @@
     padding-top: .5rem;
     padding-bottom: .5rem;
     background-color: #000000ba;
+        text-align: center;
 }
 
 #pitchingtitle{
@@ -18,4 +19,8 @@ div.row.align-items-start {
 	justify-content: center;
     --bs-gutter-x: 1rem;
 
+}
+
+div.col{
+    width: fit-content;
 }
