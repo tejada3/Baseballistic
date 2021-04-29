@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cz_@(sidr@@+&@kzozafa0g7b&$0*db2ytroc6@ed8cd@9h*e&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['baseballistc-api.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['baseballistc-api.herokuapp.com', '127.0.0.1', 'baseballistic.com']
 
 # Application definition
 
